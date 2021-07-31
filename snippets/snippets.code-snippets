@@ -1,0 +1,254 @@
+{
+	"Init Function": {
+		"scope": "javascript,typescript",
+		"prefix": "tinit",
+		"body": [
+			"function init() {",
+			"\t // create a scene, that will hold all our elements such as objects, cameras and lights.",
+			"\t let scene = new THREE.Scene();",
+			"\t // create a camera, which defines where we're looking at",
+			"\t let camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);",
+			"\t // tell the camera where to look",
+			"\t camera.position.set(0, 0, 10);",
+			"\t // create a render and set the size",
+			"\t let renderer = new THREE.WebGLRenderer();",
+			"\t renderer.setSize(window.innerWidth, window.innerHeight);",
+			"\t renderer.setClearColor(new THREE.Color('black'))",
+			"\t // add subtle ambient ligthting",
+			"\t let ambientLight = new THREE.AmbientLight(0x0c0c0c);",
+			"\t scene.add(ambientLight);",
+			"\t // add the output of the render function to the HTML",
+			"\t document.body.appendChild(renderer.domElement);",
+			"\t // (optional) add trackball controls to the camera",
+			"\t // let trackballControls = new THREE.TrackballControls(camera);",
+			"\t // var clock = new THREE.Clock();",
+			// function for re-rendering/animating the scene 
+			"\t render();",
+			"\t function render() {",
+				"\t\t // trackballControls.update(clock.getDelta());",
+				"\t\t requestAnimationFrame(render);",
+				"\t\t renderer.render(scene, camera);",
+			"\t}",
+			"}"
+		],
+		"description": "basic init function, with a scene, camera, light, enderer, and render function for THREE.js"
+	},
+
+	"GUI Init Function" : {
+		"scope": "javascript,typescript",
+		"prefix": "tinitgui",
+		"body": [
+			"function init() {",
+			"\t // create a scene, that will hold all our elements such as objects, cameras and lights.",
+			"\t let scene = new THREE.Scene();",
+			"\t // create a camera, which defines where we're looking at",
+			"\t let camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);",
+			"\t // tell the camera where to look",
+			"\t camera.position.set(0, 0, 10);",
+			"\t // create a render and set the size",
+			"\t let renderer = new THREE.WebGLRenderer();",
+			"\t renderer.setSize(window.innerWidth, window.innerHeight);",
+			"\t renderer.setClearColor(new THREE.Color('black'))",
+			"\t // add subtle ambient ligthting",
+			"\t let ambientLight = new THREE.AmbientLight(0x0c0c0c);",
+			"\t scene.add(ambientLight);",
+			"\t // add the output of the render function to the HTML",
+			"\t document.body.appendChild(renderer.domElement);",
+			"\t // create controls for the GUI",
+			"\t var controls = new function () {",
+			"\t\t // Add controls... ",
+			"\t\t // this.scaleX = 1;",
+			"\t};",
+			"\t // create the GUI",
+			"\t var gui = new dat.GUI();",
+			"\t // gui.add(controls, 'scaleX', 0, 5);",
+			"\t // (optional) add trackball controls to the camera",
+			"\t // let trackballControls = new THREE.TrackballControls(camera);",
+			"\t // var clock = new THREE.Clock();",
+			// function for re-rendering/animating the scene 
+			"\t render();",
+			"\t function render() {",
+				"\t\t // trackballControls.update(clock.getDelta());",
+				"\t\t requestAnimationFrame(render);",
+				"\t\t renderer.render(scene, camera);",
+			"\t}",
+			"}"
+		],
+		"description": "basic init function, with a scene, camera, light, gui, renderer, and render function for THREE.js"
+	},
+
+	"Three Basic Init":{
+		"scope": "javascript, typescript",
+		"prefix": "ttbi",
+		"body": [
+			"// scene",
+			"var scene = new THREE.Scene();",
+			"// camera",
+			"var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);",
+			"// renderer",
+			"var renderer = new THREE.WebGLRenderer();",
+			"renderer.setSize(window.innerWidth, window.innerHeight);",
+			"document.body.appendChild(renderer.domElement);"
+		],
+		"description": "basic init for THREE.js a scene, camera, and renderer",
+	},
+	"Create GUI": {
+		"scope": "javascript, typescript",
+		"prefix": "tgui",
+		"body": [
+			"// create controls for the GUI",
+			"var controls = new function () {",
+			"\t // Add controls... ",
+			"\t // this.scaleX = 1;",
+			"};",
+			"// create the GUI",
+			"var gui = new dat.GUI();",
+			"// add the controls to the GUI",
+			"// gui.add(controls, 'scaleX', 0, 5);"
+		],
+		"description": "Create a gui template"
+	},
+	"Camera":{
+		"scope": "javascript, typescript",
+		"prefix": "tcam",
+		"body": "let ${2}camera = new THREE.${1|PerspectiveCamera,ArrayCamera,CubeCamera,OrthographicCamera,StereoCamera|}();",
+		"description": "camera constructor"
+	},
+	"Geometries":{
+		"scope": "javascript,typescript",
+		"prefix": "tgeo",
+		"body": "let ${2}Geometry = new THREE.${1|BoxBufferGeometry,BoxGeometry,CircleBufferGeometry,CircleGeometry,ConeBufferGeometry,ConeGeometry,CylinderBufferGeometry,CylinderGeometry,DodecahedronBufferGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeBufferGeometry,ExtrudeGeometry,IcosahedronBufferGeometry,IcosahedronGeometry,LatheBufferGeometry,LatheGeometry,OctahedronBufferGeometry,OctahedronGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PlaneGeometry,PolyhedronBufferGeometry,PolyhedronGeometry,RingBufferGeometry,RingGeometry,ShapeBufferGeometry,ShapeGeometry,SphereBufferGeometry,SphereGeometry,TetrahedronBufferGeometry,TetrahedronGeometry,TextBufferGeometry,TextGeometry,TorusBufferGeometry,TorusGeometry,TorusKnotBufferGeometry,TorusKnotGeometry,TubeBufferGeometry,TubeGeometry,WireframeGeometry|}();",
+		"description": "geometry constructor"
+	},
+	"Helpers":{
+		"scope": "javascript, typescript",
+		"prefix": "thlp",
+		"body": "let ${2}Helper = new THREE.${1|ArrowHelper,AxesHelper,BoxHelper,Box3Helper,CameraHelper,DirectionalLightHelper,FaceNormalsHelper,GridHelper,PolarGridHelper,PositionalAudioHelper,HemisphereLightHelper,PlaneHelper,PointLightHelper,RectAreaLightHelper,SkeletonHelper,SpotLightHelper,VertexNormalsHelper|}();",
+		"description": "helper constructor"
+	},
+	"Materials":{
+		"scope": "javascript, typescript",
+		"prefix": "tmat",
+		"body": "let ${1}Material = new THREE.${1|LineBasicMaterial,LineDashedMaterial,Material,MeshBasicMaterial,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}();",
+		"description":"material constructor"
+	},
+	"Lights":{
+		"scope": "javascript, typescript",
+		"prefix": "tlig",
+		"body": "let ${1}Light = new THREE.${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}();",
+		"description": "light constructor"
+	},
+	"Lights/Shadows":{
+		"scope": "javascript, typescript",
+		"prefix": "tls",
+		"body": "let ${1}Shadow = new THREE.${1|DirectionalLightShadow,LightShadow,SpotLightShadow|}();",
+		"description": "lights/shadows constructor"
+	},
+
+	"Loaders":{
+		"scope": "javascript, typescript",
+		"prefix": "tloader",
+		"body": "let ${1}Loader = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
+		"description": "loaders constructor"
+	},
+	"Load Resource": {
+		"scope": "javascript, typescript",
+		"prefix": "tload",
+		"body": [
+			"const ${1:resource} = loader.load(\"${2:resource_url}\",",
+				"\t // onLoad callback",
+				"\t function onLoad($1) {",
+					"\t\t // do something with $1",
+					"\t\t // scene.add($1);",
+				"\t },",
+				"\t // (optional) onProgress callback",
+				"\t // function onProgress() {",
+					"\t\t // do something",
+				"\t // },",
+				"\t // onError callback",
+				"\t function onError(err) {",
+					"\t\t console.log('An error happened');",
+				"\t }",
+			");",
+		],
+		"description": "load in a resource"
+	},
+	"Load Function": {
+		"scope": "javascript, typescript",
+		"prefix": "tloadfunc",
+		"body": [
+			"let ${1:loader} = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
+			"const ${2:resource} = ${1}.load(\"${3:resource_url}\",",
+				"\t // onLoad callback",
+				"\t function onLoad($2) {",
+					"\t\t // do something with $2",
+					"\t\t // scene.add($2);",
+				"\t },",
+				"\t // (optional) onProgress callback",
+				"\t // function onProgress() {",
+					"\t\t // do something",
+				"\t // },",
+				"\t // onError callback",
+				"\t function onError(err) {",
+					"\t\t console.log('An error happened');",
+				"\t }",
+			");",
+		],
+		"description": "Creates a loader and then loads in a resource"
+	},
+	"Create Text": {
+		"scope": "javascript, typescript",
+		"prefix": "ttext",
+		"body": [
+			"const textLoader = new THREE.FontLoader();",
+			"const ${2:font} = textLoader.load(\"${3:resource_url}\",",
+				"\t // onLoad callback",
+				"\t function onLoad($2) {",
+					"\t\t var textGeometry = new THREE.TextGeometry(\"${4:My Text}\", {",
+						"\t\t\t font: $2,",
+						"\t\t\t size: 12,",
+						"\t\t\t height: 5,",
+						"\t\t\t curveSegments: 12,",
+						"\t\t\t bevelThickness: 1,",
+						"\t\t\t bevelSize: 2,",
+						"\t\t\t bevelEnabled: true,",
+					"\t\t });",
+					"\t\t var textMaterial = new THREE.MeshPhongMaterial({",
+						"\t\t\t color: 0xff0000, flatShading:true",
+					"\t\t });",
+					"\t\t var textMesh = new THREE.Mesh(textGeometry, textMaterial);",
+					"\t\t textMesh.position.set(0, 0, 0);",
+					"\t\t scene.add(textMesh);",
+				"\t },",
+				"\t // onProgress callback",
+				"\t function onProgress() {",
+					"\t\t // do something",
+				"\t },",
+				"\t // onError callback",
+				"\t function onError(err) {",
+					"\t\t console.log('An error happened');",
+				"\t }",
+			");",
+		],
+		"description": "Creates a basic 3D text object"
+	},
+	"Renderer":{
+		"scope": "javascript, typescript",
+		"prefix": "tren",
+		"body": "let ${2:renderer} = ${1|THREE.WebGLMultisampleRenderTarget,THREE.WebGLRenderer,THREE.WebGLRenderTarget,THREE.WebGLRenderTargetCube|}()",
+		"description": "renderer constructor"
+	},
+	"Fog":{
+		"scope": "",
+		"prefix": "tfog",
+		"body": "let fog = ${1|THREE.Fog(color\\, near\\, far),THREE.FogExp2(color\\, density)|}",
+		"description": "fog constructor"
+	},
+	"Textures":{
+		"scope": "",
+		"prefix": "ttexture",
+		"body": "let texture = ${1|THREE.CanvasTexture,THREE.CompressedTexture,THREE.CubeTexture,THREE.DataTexture,THREE.DataTexture3D,THREE.DepthTexture,THREE.Texture,THREE.VideoTexture|}",
+		"description": "texture constructor"
+	},
+	
+}

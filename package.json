@@ -1,0 +1,42 @@
+{
+    "name": "three-js-snippets",
+    "displayName": "Three.JS Snippets",
+    "description": "Common Three.JS snippets to speed up your Three.js workflow",
+    "version": "0.0.1",
+    "author": {
+        "name": "Alexander Rose",
+        "email": "acrosemail@gmail.com"
+    },
+    "publisher": "aerokaido",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "three.js",
+        "threejs",
+        "ThreeJS",
+        "Three.JS",
+        "snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript, typescript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "license": "MIT",
+    "galleryBanner": {
+        "color": "##705df2",
+        "theme": "light"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/acrose99/Three-JS-Snippets.git"
+    },
+    "icon": "logo.png"
+}
