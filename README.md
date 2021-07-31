@@ -1,6 +1,6 @@
 # Three-JS-Snippets
 
-This is a VS-Code extension that provides Three.JS snippets to speed up your Three.js development.
+This is a VSCode extension that provides Three.JS snippets to speed up your Three.js development.
 
 Specifically, it is the only extension on the marketplace that provides general functions for Three.JS, such as a snippet for quickly generating a DAT GUI, 3D text, etc while also not interfering with more common snippet libraries (as an example, instead of using 'ren' to create a WEBGLrenderer, you use 'tren' to create a WEBGLrenderer, while avoiding a very common React.JS snippet).
 
@@ -40,7 +40,7 @@ N/A
 
 ## Known Issues
 
-This is a new extension please me us know if you run into any issues by filing an issue. 
+This is a new extension so please let me know if you run into any issues by filing an issue. 
 ## Release Notes
 
 See the [CHANGELOG.md](CHANGELOG.md) for a list of changes for each version.
