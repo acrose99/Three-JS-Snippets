@@ -2,7 +2,7 @@
     "name": "three-js-snippets",
     "displayName": "Three.JS Snippets",
     "description": "Common Three.JS snippets to speed up your Three.js workflow",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Alexander Rose",
         "email": "acrosemail@gmail.com"
@@ -25,7 +25,7 @@
         "snippets": [
             {
                 "language": "javascript, typescript",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/snippets.json"
             }
         ]
     },
