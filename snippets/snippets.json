@@ -1,6 +1,5 @@
 {
 	"Init Function": {
-		"scope": "javascript,typescript",
 		"prefix": "tinit",
 		"body": [
 			"function init() {",
@@ -22,7 +21,7 @@
 			"\t // (optional) add trackball controls to the camera",
 			"\t // let trackballControls = new THREE.TrackballControls(camera);",
 			"\t // var clock = new THREE.Clock();",
-			// function for re-rendering/animating the scene 
+			"\t // function for re-rendering/animating the scene",
 			"\t render();",
 			"\t function render() {",
 				"\t\t // trackballControls.update(clock.getDelta());",
@@ -65,7 +64,7 @@
 			"\t // (optional) add trackball controls to the camera",
 			"\t // let trackballControls = new THREE.TrackballControls(camera);",
 			"\t // var clock = new THREE.Clock();",
-			// function for re-rendering/animating the scene 
+			"\t // function for re-rendering/animating the scene",
 			"\t render();",
 			"\t function render() {",
 				"\t\t // trackballControls.update(clock.getDelta());",
@@ -90,7 +89,7 @@
 			"renderer.setSize(window.innerWidth, window.innerHeight);",
 			"document.body.appendChild(renderer.domElement);"
 		],
-		"description": "basic init for THREE.js a scene, camera, and renderer",
+		"description": "basic init for THREE.js a scene, camera, and renderer"
 	},
 	"Create GUI": {
 		"scope": "javascript, typescript",
@@ -169,7 +168,7 @@
 				"\t function onError(err) {",
 					"\t\t console.log('An error happened');",
 				"\t }",
-			");",
+			");"
 		],
 		"description": "load in a resource"
 	},
@@ -192,7 +191,7 @@
 				"\t function onError(err) {",
 					"\t\t console.log('An error happened');",
 				"\t }",
-			");",
+			");"
 		],
 		"description": "Creates a loader and then loads in a resource"
 	},
@@ -228,7 +227,7 @@
 				"\t function onError(err) {",
 					"\t\t console.log('An error happened');",
 				"\t }",
-			");",
+			");"
 		],
 		"description": "Creates a basic 3D text object"
 	},
@@ -249,6 +248,5 @@
 		"prefix": "ttexture",
 		"body": "let texture = ${1|THREE.CanvasTexture,THREE.CompressedTexture,THREE.CubeTexture,THREE.DataTexture,THREE.DataTexture3D,THREE.DepthTexture,THREE.Texture,THREE.VideoTexture|}",
 		"description": "texture constructor"
-	},
-	
+	}
 }
