@@ -34,7 +34,6 @@
 	},
 
 	"GUI Init Function" : {
-		"scope": "javascript,typescript",
 		"prefix": "tinitgui",
 		"body": [
 			"function init() {",
@@ -77,7 +76,6 @@
 	},
 
 	"Three Basic Init":{
-		"scope": "javascript, typescript",
 		"prefix": "ttbi",
 		"body": [
 			"// scene",
@@ -92,7 +90,6 @@
 		"description": "basic init for THREE.js a scene, camera, and renderer"
 	},
 	"Create GUI": {
-		"scope": "javascript, typescript",
 		"prefix": "tgui",
 		"body": [
 			"// create controls for the GUI",
@@ -108,50 +105,42 @@
 		"description": "Create a gui template"
 	},
 	"Camera":{
-		"scope": "javascript, typescript",
 		"prefix": "tcam",
 		"body": "let ${2}camera = new THREE.${1|PerspectiveCamera,ArrayCamera,CubeCamera,OrthographicCamera,StereoCamera|}();",
 		"description": "camera constructor"
 	},
 	"Geometries":{
-		"scope": "javascript,typescript",
 		"prefix": "tgeo",
 		"body": "let ${2}Geometry = new THREE.${1|BoxBufferGeometry,BoxGeometry,CircleBufferGeometry,CircleGeometry,ConeBufferGeometry,ConeGeometry,CylinderBufferGeometry,CylinderGeometry,DodecahedronBufferGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeBufferGeometry,ExtrudeGeometry,IcosahedronBufferGeometry,IcosahedronGeometry,LatheBufferGeometry,LatheGeometry,OctahedronBufferGeometry,OctahedronGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PlaneGeometry,PolyhedronBufferGeometry,PolyhedronGeometry,RingBufferGeometry,RingGeometry,ShapeBufferGeometry,ShapeGeometry,SphereBufferGeometry,SphereGeometry,TetrahedronBufferGeometry,TetrahedronGeometry,TextBufferGeometry,TextGeometry,TorusBufferGeometry,TorusGeometry,TorusKnotBufferGeometry,TorusKnotGeometry,TubeBufferGeometry,TubeGeometry,WireframeGeometry|}();",
 		"description": "geometry constructor"
 	},
 	"Helpers":{
-		"scope": "javascript, typescript",
 		"prefix": "thlp",
 		"body": "let ${2}Helper = new THREE.${1|ArrowHelper,AxesHelper,BoxHelper,Box3Helper,CameraHelper,DirectionalLightHelper,FaceNormalsHelper,GridHelper,PolarGridHelper,PositionalAudioHelper,HemisphereLightHelper,PlaneHelper,PointLightHelper,RectAreaLightHelper,SkeletonHelper,SpotLightHelper,VertexNormalsHelper|}();",
 		"description": "helper constructor"
 	},
 	"Materials":{
-		"scope": "javascript, typescript",
 		"prefix": "tmat",
 		"body": "let ${1}Material = new THREE.${1|LineBasicMaterial,LineDashedMaterial,Material,MeshBasicMaterial,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}();",
 		"description":"material constructor"
 	},
 	"Lights":{
-		"scope": "javascript, typescript",
 		"prefix": "tlig",
-		"body": "let ${1}Light = new THREE.${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}();",
+		"body": "let ${2}Light = new THREE.${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}();",
 		"description": "light constructor"
 	},
 	"Lights/Shadows":{
-		"scope": "javascript, typescript",
 		"prefix": "tls",
-		"body": "let ${1}Shadow = new THREE.${1|DirectionalLightShadow,LightShadow,SpotLightShadow|}();",
+		"body": "let ${2}Shadow = new THREE.${1|DirectionalLightShadow,LightShadow,SpotLightShadow|}();",
 		"description": "lights/shadows constructor"
 	},
 
 	"Loaders":{
-		"scope": "javascript, typescript",
 		"prefix": "tloader",
-		"body": "let ${1}Loader = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
+		"body": "let ${2}Loader = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
 		"description": "loaders constructor"
 	},
 	"Load Resource": {
-		"scope": "javascript, typescript",
 		"prefix": "tload",
 		"body": [
 			"const ${1:resource} = loader.load(\"${2:resource_url}\",",
@@ -173,7 +162,6 @@
 		"description": "load in a resource"
 	},
 	"Load Function": {
-		"scope": "javascript, typescript",
 		"prefix": "tloadfunc",
 		"body": [
 			"let ${1:loader} = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
@@ -196,7 +184,6 @@
 		"description": "Creates a loader and then loads in a resource"
 	},
 	"Create Text": {
-		"scope": "javascript, typescript",
 		"prefix": "ttext",
 		"body": [
 			"const textLoader = new THREE.FontLoader();",
@@ -232,21 +219,53 @@
 		"description": "Creates a basic 3D text object"
 	},
 	"Renderer":{
-		"scope": "javascript, typescript",
 		"prefix": "tren",
 		"body": "let ${2:renderer} = ${1|THREE.WebGLMultisampleRenderTarget,THREE.WebGLRenderer,THREE.WebGLRenderTarget,THREE.WebGLRenderTargetCube|}()",
 		"description": "renderer constructor"
 	},
 	"Fog":{
-		"scope": "",
 		"prefix": "tfog",
 		"body": "let fog = ${1|THREE.Fog(color\\, near\\, far),THREE.FogExp2(color\\, density)|}",
 		"description": "fog constructor"
 	},
 	"Textures":{
-		"scope": "",
 		"prefix": "ttexture",
 		"body": "let texture = ${1|THREE.CanvasTexture,THREE.CompressedTexture,THREE.CubeTexture,THREE.DataTexture,THREE.DataTexture3D,THREE.DepthTexture,THREE.Texture,THREE.VideoTexture|}",
 		"description": "texture constructor"
+	},
+	"Resize": {
+		"prefix": "tresize",
+		"body":
+		[
+			"window.addEventListener('resize', onResize, false);",
+			"function onResize() {",
+			"\t camera.aspect = window.innerWidth / window.innerHeight;",
+			"\t camera.updateProjectionMatrix();",
+			"\t renderer.setSize(window.innerWidth, window.innerHeight);",
+			"}"
+		],
+		"description": "Automatically resize the canvas to the size of the window"
+	},
+	"Create Mesh/Shape" : {
+		"prefix": "tmesh",
+		"body":
+		[
+			"let ${1:shape} = new THREE.${2|BoxGeometry,CircleGeometry,ConeGeometry,CylinderGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeGeometry,IcosahedronGeometry,LatheGeometry,OctahedronGeometry,ParametricGeometry,PlaneGeometry,PolyhedronGeometry,RingGeometry,ShapeGeometry,SphereGeometry,TetrahedronGeometry,TextGeometry,TorusGeometry,TorusKnotGeometry,TubeGeometry,WireframeGeometry|}",
+			"let $1Material = new THREE.${3|MeshBasicMaterial, LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
+			"let $1Mesh = new THREE.Mesh({1:shape}, $1Material);",
+			"scene.add($1Mesh);"
+		],
+		"description": "Add a shape/mesh to a scene"
+	},
+	"Create Buffer Mesh/Shape" : {
+		"prefix": "tbufmesh",
+		"body":
+		[
+			"let buffer${1:Shape} = new THREE.${2|BoxBufferGeometry,CircleBufferGeometry,ConeBufferGeometry,CylinderBufferGeometry,DodecahedronBufferGeometry,ExtrudeBufferGeometry,IcosahedronBufferGeometry,LatheBufferGeometry,OctahedronBufferGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PolyhedronBufferGeometry,RingBufferGeometry,ShapeBufferGeometry,SphereBufferGeometry,TetrahedronBufferGeometry,TextBufferGeometry,TorusBufferGeometry,TorusKnotBufferGeometry,TubeBufferGeometry|}",
+			"let $1Material = new THREE.${3|MeshBasicMaterial, LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
+			"let $1Mesh = new THREE.MeshBufferGeometry({1:shape}, $1Material);",
+			"scene.add($1Mesh);"
+		],
+		"description": "Add a buffered shape/mesh to a scene"
 	}
 }

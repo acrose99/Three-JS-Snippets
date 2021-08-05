@@ -1,0 +1,165 @@
+{
+	"useThree" : {
+		"prefix": "tut",
+		"body": "const { ${1: state} } = useThree()",
+		"description" : "R3F useThree hook"
+	},
+	"useFrame": {
+		"prefix": "tuf",
+		"body" :  [
+			"useFrame((state, delta) => {",
+			"\t // This function runs 60 times/second inside the global render-loop",
+			"})"
+		],
+		"description" : "R3F useFrame hook"
+	},
+
+	"useLoader" : {
+		"prefix": "tul",
+		"body" : "const ${1:asset} = useLoader(${2|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}, '${3:/resource.png}')", 
+		"description" : "R3F useLoader hook"
+	},
+
+	"useGraph" : {
+		"prefix": "tug",
+		"body" : "const {${1:nodes}, ${2:materials}} = useGraph(${3:scene})",
+		"description" : "R3F useGraph hook"
+	},
+
+	"Init Function": {
+		"prefix": "tinit",
+		"body": [
+			"import * as React from'react'",
+			"import {Canvas} from '@react-three/fiber'",
+			"\n function ${1:Component}() {",
+			"\t return (",
+			"\t\t <Canvas>",
+			"\t\t\t {/* add geometries and shapes here*/}",
+			"\t\t </Canvas>",
+			"\t )",
+			"}",
+			"\n export default $1"
+		],
+		"description": "Basic init function for R3F"
+	},
+
+	"Drei Init Function": {
+		"prefix": "tinitd",
+		"body": [
+			"import * as React from'react'",
+			"import {Canvas} from '@react-three/fiber'",
+			"import { useLoader, useFrame, useThree } from '@react-three/drei'",
+			"\n function ${1:Component}() {",
+			"\t return (",
+			"\t\t <Canvas>",
+			"\t\t\t {/* add geometries and shapes here*/}",
+			"\t\t </Canvas>",
+			"\t )",
+			"}",
+			"\n export default $1"
+		],
+		"description": "Basic init function for R3F with support for Drei and its helpers"
+	},
+	"Create GUI": {
+		"prefix": "tgui",
+		"body": [
+			"// put 'import { useControls } from 'leva' on top of the file",
+			"const { ${1:x}, ${2:y} } = useControls({ $1: 0, $2: 0 })"
+		],
+		"description": "Create a gui template for R3F based on Leva"
+	},
+	"Camera":{
+		"prefix": "tcam",
+		"body": "const ${2}camera = <${1|perspectiveCamera,arrayCamera,cubeCamera,orthographicCamera,stereoCamera|}/>;",
+		"description": "Create a camera object with R3F"
+	},
+	"Geometries":{
+		"prefix": "tgeo",
+		"body": "const ${2}Geometry = <${1|boxBufferGeometry,BoxGeometry,CircleBufferGeometry,CircleGeometry,ConeBufferGeometry,ConeGeometry,CylinderBufferGeometry,CylinderGeometry,DodecahedronBufferGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeBufferGeometry,ExtrudeGeometry,IcosahedronBufferGeometry,IcosahedronGeometry,LatheBufferGeometry,LatheGeometry,OctahedronBufferGeometry,OctahedronGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PlaneGeometry,PolyhedronBufferGeometry,PolyhedronGeometry,RingBufferGeometry,RingGeometry,ShapeBufferGeometry,ShapeGeometry,SphereBufferGeometry,SphereGeometry,TetrahedronBufferGeometry,TetrahedronGeometry,TextBufferGeometry,TextGeometry,TorusBufferGeometry,TorusGeometry,TorusKnotBufferGeometry,TorusKnotGeometry,TubeBufferGeometry,TubeGeometry,WireframeGeometry|}/>;",
+		"description": "Create a geometry object with R3F"
+	},
+	"Helpers":{
+		"prefix": "thlp",
+		"body": "const ${2}Helper = (<${1|arrowHelper,axesHelper,boxHelper,box3Helper,cameraHelper,directionalLightHelper,faceNormalsHelper,gridHelper,polarGridHelper,positionalAudioHelper,hemisphereLightHelper,planeHelper,pointLightHelper,rectAreaLightHelper,skeletonHelper,spotLightHelper,vertexNormalsHelper|}/>;",
+		"description": "Create a helper object with R3F"
+	},
+	"Materials":{
+		"prefix": "tmat",
+		"body": "const ${2}Material = (<${1|lineBasicMaterial,lineDashedMaterial,meshBasicMaterial,meshDepthMaterial,meshDistanceMaterial,meshLambertMaterial,meshMatcapMaterial,meshNormalMaterial,meshPhongMaterial,meshPhysicalMaterial,meshStandardMaterial,meshToonMaterial,pointsMaterial,rawShaderMaterial,shaderMaterial,shadowMaterial,spriteMaterial|}/>",
+		"description":"Create a material object with R3F"
+	},
+	"Lights":{
+		"prefix": "tlig",
+		"body": "const ${2}Light = (<${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}/>;",
+		"description": "Creates a light object with R3F"
+	},
+	"Lights/Shadows":{
+		"prefix": "tls",
+		"body": "const ${2}Shadow = (<${1|directionalLightShadow,lightShadow,spotLightShadow|}/>;",
+		"description": "Creates a light/shadow object with R3F"
+	},
+	"Create Text": {
+		"prefix": "ttext",
+		"body": [
+			"/* Uses the drei helper library, so you must import the text component on top*/",
+			"const ${1:Text} = (<Text color='black' anchorX='center' anchorY='middle' fontSize={12}>  ${2:Text}  </Text>);"
+		],
+		"description": "Creates a basic 3D text object using R3F and Drei"
+	},
+	"Fog":{
+		"prefix": "tfog",
+		"body": "const ${2:fog} = <${1|fog,fogExp2|}/>",
+		"description": "Create a fog object using R3F"
+	},
+	"Textures":{
+		"prefix": "ttexture",
+		"body":"const ${2:texture} = (<${1|canvasTexture,compressedTexture,cubeTexture,dataTexture,dataTexture3D,depthTexture,texture,videoTexture|}/>",
+		"description": "Create a texture using R3F"
+	},
+	"Resize": {
+		"prefix": "tresize",
+		"body":
+		[	"// import { render, events } from '@react-three/fiber'",
+			"window.addEventListener('resize', () =>",
+			"render(<mesh />, document.querySelector('canvas'), {",
+			"\t\t events,", 
+			"\t\t size: { width: window.innerWidth, height: window.innerHeight },",
+			"\t})",
+			")",
+			"window.dispatchEvent(new Event('resize'))"
+		],
+		"description": "Automatically resize the canvas to the size of the window, with R3F"
+	},
+	"Create Mesh/Shape R3F" : {
+		"prefix": "tmesh",
+		"body": [
+			"const ${3:Shape} = (<mesh>",
+			"\t <${1|lineBasicMaterial,lineDashedMaterial,meshBasicMaterial,meshDepthMaterial,meshDistanceMaterial,meshLambertMaterial,meshMatcapMaterial,meshNormalMaterial,meshPhongMaterial,meshPhysicalMaterial,meshStandardMaterial,meshToonMaterial,pointsMaterial,rawShaderMaterial,shaderMaterial,shadowMaterial,spriteMaterial|}/>,",
+			"\t <${2|boxGeometry,circleGeometry,coneGeometry,cylinderGeometry,dodecahedronGeometry,edgesGeometry,extrudeGeometry,icosahedronGeometry,latheGeometry,octahedronGeometry,parametricGeometry,planeGeometry,polyhedronGeometry,ringGeometry,shapeGeometry,sphereGeometry,tetrahedronGeometry,textGeometry,torusGeometry,torusKnotGeometry,tubeGeometry,wireframeGeometry|}/>",
+			"</mesh>)"
+		],
+		"description": "Creates a shape with R3F"
+	},
+	"Create Buffer Mesh/Shape R3F": {
+		"prefix": "tbufmesh",
+		"body": [
+			"const buffer${3:Shape} = (<mesh>",
+			"\t <${1|lineBasicMaterial,lineDashedMaterial,meshBasicMaterial,meshDepthMaterial,meshDistanceMaterial,meshLambertMaterial,meshMatcapMaterial,meshNormalMaterial,meshPhongMaterial,meshPhysicalMaterial,meshStandardMaterial,meshToonMaterial,pointsMaterial,rawShaderMaterial,shaderMaterial,shadowMaterial,spriteMaterial|}/>,",
+			"\t <${2|boxBufferGeometry,circleBufferGeometry,coneBufferGeometry,cylinderBufferGeometry,dodecahedronBufferGeometry,edgesBufferGeometry,extrudeBufferGeometry,icosahedronBufferGeometry,latheBufferGeometry,octahedronBufferGeometry,parametricBufferGeometry,planeBufferGeometry,polyhedronBuffereometry,ringBufferGeometry,shapeBufferGeometry,sphereBufferGeometry,tetrahedronBufferGeometry,textBufferGeometry,torusBufferGeometry,torusBufferGeometry,torusKnotBufferGeometry,tubeBufferGeometry|}/>",
+			"</mesh>)"
+		],
+		"description": "Creates a buffered shape with R3F"
+	},
+	"Create Shape Drei" : {
+		"prefix": "tmeshd",
+		"body":
+		[
+			"/* Uses the drei helper library, so you must import the correct component*/",
+			"const ${2:Shape} = (<${1|Box,Circle,Cone,Cylinder,Sphere,Plane,Torus,TorusKnot,Terahedron,Ring,Polyhedron,Icosahedron,Octahedron,Dodecachedron|}>",
+			"\t <meshBasicMaterial attach='material' color='hotpink' />",
+			"</$1>)"
+		],
+		"description": "Add a shape to a scene in R3F using the drei helper library"
+	}
+	
+}
