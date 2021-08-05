@@ -1,34 +1,53 @@
 # Three-JS-Snippets
 
-This is a VSCode extension that provides Three.JS snippets to speed up your Three.js development.
+This is a VSCode extension that provides Three.JS snippets to speed up your Three.js development. Snippets exist for the popular framework React Three Fiber (R3F) and Three.js on its own. 
 
-Specifically, it is the only extension on the marketplace that provides general functions for Three.JS, such as a snippet for quickly generating a DAT GUI, 3D text, etc while also not interfering with more common snippet libraries (as an example, instead of using 'ren' to create a WEBGLrenderer, you use 'tren' to create a WEBGLrenderer, while avoiding a very common React.JS snippet).
+Specifically, it is the only extension on the marketplace that provides general functions for Three.JS, both for R3F as well as for the core library. The snippets contain intial starter functions as well as general constructors/objects.
 
-Each snippet starts with the letter t, followed by the name of the shortcut. See below for a list of all the snippets.
+Each snippet starts with the letter t, followed by the name of the shortcut, in order to avoid conflicts with other snippets (I.E instead of using 'ren' to create a WEBGLrenderer, you use 'tren' to create a WEBGLrenderer to avoida conflict).a very common React.JS snippet). See below for a list of all the snippets.
 
 
 ## List of Snippets
 
+### Shared  R3F and Three.js Snippets
 |trigger|contents|
 |:--:|:--:|
-|tinit|Creates a entire Three.JS scene with a camera, a light, a renderer, a render function for animation, and optional settings|
-|tinitgui|Same as `tinit`, but with a DAT GUI template|
-|tbi|Basic Init function (camera, scene, renderer)|
-|tgui|Creates a DAT GUI|
-|tcam|Creates and chooses a specific Camera|constructor|
+|tgui|Creates a Leva GUI for R3F or a DAT Gui for Three.js|
+|tcam|Creates and chooses a specific Camera constructor|
 |tgeo|Creates and chooses a specific Geometry constructor|
 |thlp|Creates and chooses a specific helper constructor|
 |tmat|Creates and chooses a specific material constructor|
 |tlig|Creates and chooses a specific light constructor|
 |tls|Creates and chooses a specific lights/shadows constructor|
+|ttext|Loads and creates a 3D text object|
+|ttexture|Creates and chooses a specific texture constructor|
+|tmesh|Creates and chooses a specific object constructor|
+|tresize|Automatically resize the canvas to the size of the window|
+|tbufmesh|Creates and chooses a specific buffer object constructor|
+|tfog|Creates and chooses a specific fog construtor| 
+
+### Three.js Snippets
+|trigger|contents|
+|:--:|:--:|
+|tinit|Creates a entire Three.JS scene with a camera, a light, a renderer, a render function for animation, and optional settings|
+|tinitgui|Same as `tinit`, but with a DAT GUI template|
+|tbi|Basic Init function (camera, scene, renderer)|
 |tloader|Creates and chooses a specific loader constructor|
 |tload|Loads a specific resource and creates a template function to modify/use the resource in a scene|
-|tloadfunc|Combines`tload` and `tloadfunc` all at once|
-|ttext| Loads and creates a 3D text object|
-|tobj|Creates and chooses a specific object constructor|
 |tren|Creates and chooses a specific renderer constructor|
-|tfog|Creates and chooses a specific fog construtor| 
-|ttext|Creates and chooses a specific texture constructor|
+|tloadfunc|Combines`tload` and `tloadfunc` all at once|
+|ttexture|Creates and chooses a specific texture constructor|
+
+### R3F Snippets
+|trigger|contents|
+|:--:|:--:|
+|tinit|Creates a R3F scene with a basic Canvas|
+|tinitd|Same as `tinit`, but with an extra import of DREI and its hooks|
+|tut|Creates a R3F useThree hook|
+|tuf| Creates a R3F useFrame hook|
+|tul|Creates a R3F useLoader hook|
+|tut|Creates a R3F useGraph hook|
+|tmeshd|Same as`tmesh`, but uses the DREI shape components|
 
 ## Requirements
 

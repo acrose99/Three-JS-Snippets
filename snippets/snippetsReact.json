@@ -1,4 +1,4 @@
-{
+	{
 	"useThree" : {
 		"prefix": "tut",
 		"body": "const { ${1: state} } = useThree()",
@@ -30,7 +30,7 @@
 		"prefix": "tinit",
 		"body": [
 			"import * as React from'react'",
-			"import {Canvas} from '@react-three/fiber'",
+			"import {useLoader, useFrame, useThree, Canvas} from '@react-three/fiber'",
 			"\n function ${1:Component}() {",
 			"\t return (",
 			"\t\t <Canvas>",
@@ -47,8 +47,8 @@
 		"prefix": "tinitd",
 		"body": [
 			"import * as React from'react'",
-			"import {Canvas} from '@react-three/fiber'",
-			"import { useLoader, useFrame, useThree } from '@react-three/drei'",
+			"import {useLoader, useFrame, useThree, Canvas} from '@react-three/fiber'",
+			"import { useHelper, useAspect, useProgress, useTexture  } from '@react-three/drei'",
 			"\n function ${1:Component}() {",
 			"\t return (",
 			"\t\t <Canvas>",
