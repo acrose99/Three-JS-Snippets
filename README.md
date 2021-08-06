@@ -1,10 +1,13 @@
 # Three-JS-Snippets
 
-This is a VSCode extension that provides Three.JS snippets to speed up your Three.js development. Snippets exist for the popular framework React Three Fiber (R3F) and Three.js on its own. 
+This is a VSCode extension that provides Three.JS snippets to speed up your Three.js development. Snippets exist for the popular framework React Three Fiber (R3F) and Three.js on its own, for Typescript and Javascript.
 
 Specifically, it is the only extension on the marketplace that provides general functions for Three.JS, both for R3F as well as for the core library. The snippets contain intial starter functions as well as general constructors/objects.
 
-Each snippet starts with the letter t, followed by the name of the shortcut, in order to avoid conflicts with other snippets (I.E instead of using 'ren' to create a WEBGLrenderer, you use 'tren' to create a WEBGLrenderer to avoida conflict).a very common React.JS snippet). See below for a list of all the snippets.
+Each snippet starts with the letter t, followed by the name of the shortcut, in order to avoid conflicts with other snippets (I.E instead of using 'ren' to create a WEBGLrenderer, you use 'tren' to create a WEBGLrenderer to avoid a conflict with a very common React.JS snippet). See below for a list of all the snippets.
+
+PS: Typscript is supported but many snippets may not work. For example, OrbitControls will break if you use typescript.
+
 
 
 ## List of Snippets

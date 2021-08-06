@@ -1,6 +1,11 @@
 # Change Log
 
 All notable changes to the thus extension will be documented in this file.
+## [0.5.0] - 2021-08-4]
+### Changed
+- Added TS support/explanatio.
+- Changed documentation
+
 ## [0.4.0] - 2021-08-4]
 ### Added
 - Added support for R3F.

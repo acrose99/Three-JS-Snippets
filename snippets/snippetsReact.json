@@ -25,6 +25,7 @@
 		"body" : "const {${1:nodes}, ${2:materials}} = useGraph(${3:scene})",
 		"description" : "R3F useGraph hook"
 	},
+	
 
 	"Init Function": {
 		"prefix": "tinit",
