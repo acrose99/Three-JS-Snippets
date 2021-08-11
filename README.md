@@ -62,7 +62,7 @@ N/A
 
 ## Known Issues
 
-This is a new extension so please let me know if you run into any issues by filing an issue. 
+This is a new extension so please let me know if you run into any issues by filing an issue on Github. 
 ## Release Notes
 
 See the [CHANGELOG.md](CHANGELOG.md) for a list of changes for each version.

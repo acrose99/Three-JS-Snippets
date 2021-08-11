@@ -1,9 +1,14 @@
 # Change Log
 
 All notable changes to the thus extension will be documented in this file.
+## [0.6.0] - 2021-08-10]
+### Changed
+- More sensible snippets 
+- Changed documentation
+
 ## [0.5.0] - 2021-08-4]
 ### Changed
-- Added TS support/explanatio.
+- Added TS support/explanation.
 - Changed documentation
 
 ## [0.4.0] - 2021-08-4]

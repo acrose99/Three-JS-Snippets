@@ -36,7 +36,7 @@
                 "path": "./snippets/snippetsReact.json"
             },
             {
-                "language": "javascriptreact",
+                "language": "jsx",
                 "path": "./snippets/snippetsReact.json"
             }
         ]
