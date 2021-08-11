@@ -257,7 +257,7 @@
 		[
 			"let ${1:material} = new THREE.${2|MeshBasicMaterial, LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
 			"\nlet ${3:$1Mesh} = new THREE.Mesh(",
-			"\tnew THREE.${2|BoxGeometry,CircleGeometry,ConeGeometry,CylinderGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeGeometry,IcosahedronGeometry,LatheGeometry,OctahedronGeometry,ParametricGeometry,PlaneGeometry,PolyhedronGeometry,RingGeometry,ShapeGeometry,SphereGeometry,TetrahedronGeometry,TextGeometry,TorusGeometry,TorusKnotGeometry,TubeGeometry,WireframeGeometry|},",
+			"\tnew THREE.${4|BoxGeometry,CircleGeometry,ConeGeometry,CylinderGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeGeometry,IcosahedronGeometry,LatheGeometry,OctahedronGeometry,ParametricGeometry,PlaneGeometry,PolyhedronGeometry,RingGeometry,ShapeGeometry,SphereGeometry,TetrahedronGeometry,TextGeometry,TorusGeometry,TorusKnotGeometry,TubeGeometry,WireframeGeometry|},",
 			"\t$1",
 			")" 
 		],
@@ -269,7 +269,7 @@
 		[
 			"let ${1:material} = new THREE.${2|MeshBasicMaterial,LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
 			"\nlet ${3:$1Mesh} = new THREE.Mesh(",
-			"\tnew THREE.${2|BoxBufferGeometry,CircleBufferGeometry,ConeBufferGeometry,CylinderBufferGeometry,DodecahedronBufferGeometry,ExtrudeBufferGeometry,IcosahedronBufferGeometry,LatheBufferGeometry,OctahedronBufferGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PolyhedronBufferGeometry,RingBufferGeometry,ShapeBufferGeometry,SphereBufferGeometry,TetrahedronBufferGeometry,TextBufferGeometry,TorusBufferGeometry,TorusKnotBufferGeometry,TubeBufferGeometry|}",
+			"\tnew THREE.${4|BoxBufferGeometry,CircleBufferGeometry,ConeBufferGeometry,CylinderBufferGeometry,DodecahedronBufferGeometry,ExtrudeBufferGeometry,IcosahedronBufferGeometry,LatheBufferGeometry,OctahedronBufferGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PolyhedronBufferGeometry,RingBufferGeometry,ShapeBufferGeometry,SphereBufferGeometry,TetrahedronBufferGeometry,TextBufferGeometry,TorusBufferGeometry,TorusKnotBufferGeometry,TubeBufferGeometry|}",
 			"\t$1",
 			")"
 		],
