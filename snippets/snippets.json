@@ -5,9 +5,9 @@
 			"import * as THREE from 'three';",
 			"function init() {",
 			"\t// create a scene, that will hold all our elements such as objects, cameras and lights.",
-			"\tlet scene = new THREE.Scene();",
+			"\tconst scene = new THREE.Scene();",
 			"\t// create a camera, which defines where we're looking at",
-			"\tlet camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);",
+			"\tconst camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);",
 			"\t// tell the camera where to look",
 			"\tcamera.position.set(0, 0, 10);",
 			"\t// create a render and set the size",
@@ -15,11 +15,10 @@
 			"\t\twidth: window.innerWidth,",
 			"\t\theight: window.innerHeight,",
 			"\t}",
-			"\tlet renderer = new THREE.WebGLRenderer();",
+			"\tconst renderer = new THREE.WebGLRenderer();",
 			"\trenderer.setSize(sizes.width, sizes.height);",
 			"\t// add the output of the render function to the HTML",
 			"\tdocument.body.appendChild(renderer.domElement);",
-			"\n\t// var clock = new THREE.Clock();",
 			"\t// function for re-rendering/animating the scene",
 			"\tfunction tick() {",
 			"\t\trequestAnimationFrame(tick);",
@@ -39,28 +38,27 @@
 			"import * as dat from 'dat.gui';",
 			"function init() {",
 			"\t// create a scene, that will hold all our elements such as objects, cameras and lights.",
-			"\tlet scene = new THREE.Scene();",
+			"\tconst scene = new THREE.Scene();",
 			"\n\t// create a camera, which defines where we're looking at",
-			"\tlet camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);",
+			"\tconst camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);",
 			"\t// tell the camera where to look",
 			"\tcamera.position.set(0, 0, 10);",
 			"\tconst sizes = {",
 			"\t\twidth: window.innerWidth,",
 			"\t\theight: window.innerHeight,",
 			"\t}",
-			"\tlet renderer = new THREE.WebGLRenderer();",
+			"\tconst renderer = new THREE.WebGLRenderer();",
 			"\trenderer.setSize(sizes.width, sizes.height);",
 			"\n\t// add the output of the render function to the HTML",
 			"\tdocument.body.appendChild(renderer.domElement);",
 			"\n\t// create controls for the GUI",
-			"\tvar controls = new function () {",
+			"\tconst controls = new function () {",
 			"\t\t// Add controls... ",
 			"\t\t// this.scaleX = 1;",
 			"\t};",
 			"\t// create the GUI",
-			"\tvar gui = new dat.GUI();",
+			"\tconst gui = new dat.GUI();",
 			"\t// gui.add(controls, 'scaleX', 0, 5);",
-			"\n\t// var clock = new THREE.Clock();",
 			"\n\t// function for re-rendering/animating the scene",
 			"\tfunction tick() {",
 			"\t\trequestAnimationFrame(tick);",
@@ -78,15 +76,15 @@
 		"body": [
 			"import * as THREE from 'three';",
 			"// scene",
-			"var scene = new THREE.Scene();",
+			"const scene = new THREE.Scene();",
 			"// camera",
-			"var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);",
+			"const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, .1, 1000);",
 			"// renderer",
 			"const sizes = {",
 			"\t width: window.innerWidth,",
 			"\t height: window.innerHeight,",
 			"}",
-			"let renderer = new THREE.WebGLRenderer();",
+			"const renderer = new THREE.WebGLRenderer();",
 			"renderer.setSize(sizes.width, sizes.height);",
 			"renderer.setSize(window.innerWidth, window.innerHeight);",
 			"renderer.render(scene, camera);",
@@ -98,12 +96,12 @@
 		"prefix": "tgui",
 		"body": [
 			"// create controls for the GUI",
-			"var controls = new function () {",
+			"const controls = new function () {",
 			"\t // Add controls... ",
 			"\t // this.scaleX = 1;",
 			"};",
 			"// create the GUI",
-			"var gui = new dat.GUI();",
+			"const gui = new dat.GUI();",
 			"// add the controls to the GUI",
 			"// gui.add(controls, 'scaleX', 0, 5);"
 		],
@@ -111,38 +109,38 @@
 	},
 	"Camera":{
 		"prefix": "tcam",
-		"body": "let ${2}camera = new THREE.${1|PerspectiveCamera,ArrayCamera,CubeCamera,OrthographicCamera,StereoCamera|}();",
+		"body": "const ${2}camera = new THREE.${1|PerspectiveCamera,ArrayCamera,CubeCamera,OrthographicCamera,StereoCamera|}();",
 		"description": "camera constructor"
 	},
 	"Geometries":{
 		"prefix": "tgeo",
-		"body": "let ${2}Geometry = new THREE.${1|BoxBufferGeometry,BoxGeometry,CircleBufferGeometry,CircleGeometry,ConeBufferGeometry,ConeGeometry,CylinderBufferGeometry,CylinderGeometry,DodecahedronBufferGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeBufferGeometry,ExtrudeGeometry,IcosahedronBufferGeometry,IcosahedronGeometry,LatheBufferGeometry,LatheGeometry,OctahedronBufferGeometry,OctahedronGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PlaneGeometry,PolyhedronBufferGeometry,PolyhedronGeometry,RingBufferGeometry,RingGeometry,ShapeBufferGeometry,ShapeGeometry,SphereBufferGeometry,SphereGeometry,TetrahedronBufferGeometry,TetrahedronGeometry,TextBufferGeometry,TextGeometry,TorusBufferGeometry,TorusGeometry,TorusKnotBufferGeometry,TorusKnotGeometry,TubeBufferGeometry,TubeGeometry,WireframeGeometry|}();",
+		"body": "const ${2}Geometry = new THREE.${1|BoxBufferGeometry,BoxGeometry,CircleBufferGeometry,CircleGeometry,ConeBufferGeometry,ConeGeometry,CylinderBufferGeometry,CylinderGeometry,DodecahedronBufferGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeBufferGeometry,ExtrudeGeometry,IcosahedronBufferGeometry,IcosahedronGeometry,LatheBufferGeometry,LatheGeometry,OctahedronBufferGeometry,OctahedronGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PlaneGeometry,PolyhedronBufferGeometry,PolyhedronGeometry,RingBufferGeometry,RingGeometry,ShapeBufferGeometry,ShapeGeometry,SphereBufferGeometry,SphereGeometry,TetrahedronBufferGeometry,TetrahedronGeometry,TextBufferGeometry,TextGeometry,TorusBufferGeometry,TorusGeometry,TorusKnotBufferGeometry,TorusKnotGeometry,TubeBufferGeometry,TubeGeometry,WireframeGeometry|}();",
 		"description": "geometry constructor"
 	},
 	"Helpers":{
 		"prefix": "thlp",
-		"body": "let ${2}Helper = new THREE.${1|ArrowHelper,AxesHelper,BoxHelper,Box3Helper,CameraHelper,DirectionalLightHelper,FaceNormalsHelper,GridHelper,PolarGridHelper,PositionalAudioHelper,HemisphereLightHelper,PlaneHelper,PointLightHelper,RectAreaLightHelper,SkeletonHelper,SpotLightHelper,VertexNormalsHelper|}();",
+		"body": "const ${2}Helper = new THREE.${1|ArrowHelper,AxesHelper,BoxHelper,Box3Helper,CameraHelper,DirectionalLightHelper,FaceNormalsHelper,GridHelper,PolarGridHelper,PositionalAudioHelper,HemisphereLightHelper,PlaneHelper,PointLightHelper,RectAreaLightHelper,SkeletonHelper,SpotLightHelper,VertexNormalsHelper|}();",
 		"description": "helper constructor"
 	},
 	"Materials":{
 		"prefix": "tmat",
-		"body": "let ${1}Material = new THREE.${1|LineBasicMaterial,LineDashedMaterial,Material,MeshBasicMaterial,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}();",
+		"body": "const ${1}Material = new THREE.${1|LineBasicMaterial,LineDashedMaterial,Material,MeshBasicMaterial,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}();",
 		"description":"material constructor"
 	},
 	"Lights":{
 		"prefix": "tlig",
-		"body": "let ${2}Light = new THREE.${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}();",
+		"body": "const ${2}Light = new THREE.${1|AmbientLight,DirectionalLight,HemisphereLight,Light,PointLight,RectAreaLight,SpotLight|}();",
 		"description": "light constructor"
 	},
 	"Lights/Shadows":{
 		"prefix": "tls",
-		"body": "let ${2}Shadow = new THREE.${1|DirectionalLightShadow,LightShadow,SpotLightShadow|}();",
+		"body": "const ${2}Shadow = new THREE.${1|DirectionalLightShadow,LightShadow,SpotLightShadow|}();",
 		"description": "lights/shadows constructor"
 	},
 
 	"Loaders":{
 		"prefix": "tloader",
-		"body": "let ${2}Loader = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
+		"body": "const ${2}Loader = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
 		"description": "loaders constructor"
 	},
 	"Load Resource": {
@@ -169,7 +167,7 @@
 	"Load Function": {
 		"prefix": "tloadfunc",
 		"body": [
-			"let ${1:loader} = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
+			"const ${1:loader} = new THREE.${1|AnimationLoader,AudioLoader,BufferGeometryLoader,Cache,CompressedTextureLoader,CubeTextureLoader,DataTextureLoader,FileLoader,FontLoader,ImageBitmapLoader,ImageLoader,Loader,LoaderUtils,MaterialLoader,ObjectLoader,TextureLoader|}();",
 			"const ${2:resource} = ${1}.load(\"${3:resource_url}\",",
 				"\t// onLoad callback",
 				"\tfunction onLoad($2) {",
@@ -195,7 +193,7 @@
 			"const ${2:font} = textLoader.load(\"${3:resource_url}\",",
 				"\t// onLoad callback",
 				"\t function onLoad($2) {",
-					"\t\tvar textGeometry = new THREE.TextGeometry(\"${4:My Text}\", {",
+					"\t\tconst textGeometry = new THREE.TextGeometry(\"${4:My Text}\", {",
 						"\t\t\tfont: $2,",
 						"\t\t\tsize: 12,",
 						"\t\t\theight: 5,",
@@ -204,10 +202,10 @@
 						"\t\t\tbevelSize: 2,",
 						"\t\t\tbevelEnabled: true,",
 					"\t\t});",
-					"\t\tvar textMaterial = new THREE.MeshPhongMaterial({",
+					"\t\tconst textMaterial = new THREE.MeshPhongMaterial({",
 						"\t\t\tcolor: 0xff0000, flatShading:true",
 					"\t\t});",
-					"\t\tvar textMesh = new THREE.Mesh(textGeometry, textMaterial);",
+					"\t\tconst textMesh = new THREE.Mesh(textGeometry, textMaterial);",
 					"\t\ttextMesh.position.set(0, 0, 0);",
 					"\t\tscene.add(textMesh);",
 				"\t},",
@@ -225,17 +223,17 @@
 	},
 	"Renderer":{
 		"prefix": "tren",
-		"body": "let ${2:renderer} = ${1|THREE.WebGLMultisampleRenderTarget,THREE.WebGLRenderer,THREE.WebGLRenderTarget,THREE.WebGLRenderTargetCube|}()",
+		"body": "const ${2:renderer} = ${1|THREE.WebGLMultisampleRenderTarget,THREE.WebGLRenderer,THREE.WebGLRenderTarget,THREE.WebGLRenderTargetCube|}()",
 		"description": "renderer constructor"
 	},
 	"Fog":{
 		"prefix": "tfog",
-		"body": "let fog = ${1|THREE.Fog(color\\, near\\, far),THREE.FogExp2(color\\, density)|}",
+		"body": "const fog = ${1|THREE.Fog(color\\, near\\, far),THREE.FogExp2(color\\, density)|}",
 		"description": "fog constructor"
 	},
 	"Textures":{
 		"prefix": "ttexture",
-		"body": "let texture = ${1|THREE.CanvasTexture,THREE.CompressedTexture,THREE.CubeTexture,THREE.DataTexture,THREE.DataTexture3D,THREE.DepthTexture,THREE.Texture,THREE.VideoTexture|}",
+		"body": "const texture = ${1|THREE.CanvasTexture,THREE.CompressedTexture,THREE.CubeTexture,THREE.DataTexture,THREE.DataTexture3D,THREE.DepthTexture,THREE.Texture,THREE.VideoTexture|}",
 		"description": "texture constructor"
 	},
 	"Resize": {
@@ -255,8 +253,8 @@
 		"prefix": "tmesh",
 		"body":
 		[
-			"let ${1:material} = new THREE.${2|MeshBasicMaterial, LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
-			"\nlet ${3:$1Mesh} = new THREE.Mesh(",
+			"const ${1:material} = new THREE.${2|MeshBasicMaterial, LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
+			"\nconst ${3:$1Mesh} = new THREE.Mesh(",
 			"\tnew THREE.${4|BoxGeometry,CircleGeometry,ConeGeometry,CylinderGeometry,DodecahedronGeometry,EdgesGeometry,ExtrudeGeometry,IcosahedronGeometry,LatheGeometry,OctahedronGeometry,ParametricGeometry,PlaneGeometry,PolyhedronGeometry,RingGeometry,ShapeGeometry,SphereGeometry,TetrahedronGeometry,TextGeometry,TorusGeometry,TorusKnotGeometry,TubeGeometry,WireframeGeometry|},",
 			"\t$1",
 			")" 
@@ -267,8 +265,8 @@
 		"prefix": "tbufmesh",
 		"body":
 		[
-			"let ${1:material} = new THREE.${2|MeshBasicMaterial,LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
-			"\nlet ${3:$1Mesh} = new THREE.Mesh(",
+			"const ${1:material} = new THREE.${2|MeshBasicMaterial,LineBasicMaterial,LineDashedMaterial,Material,MeshDepthMaterial,MeshDistanceMaterial,MeshLambertMaterial,MeshMatcapMaterial,MeshNormalMaterial,MeshPhongMaterial,MeshPhysicalMaterial,MeshStandardMaterial,MeshToonMaterial,PointsMaterial,RawShaderMaterial,ShaderMaterial,ShadowMaterial,SpriteMaterial|}",
+			"\nconst ${3:$1Mesh} = new THREE.Mesh(",
 			"\tnew THREE.${4|BoxBufferGeometry,CircleBufferGeometry,ConeBufferGeometry,CylinderBufferGeometry,DodecahedronBufferGeometry,ExtrudeBufferGeometry,IcosahedronBufferGeometry,LatheBufferGeometry,OctahedronBufferGeometry,ParametricBufferGeometry,ParametricGeometry,PlaneBufferGeometry,PolyhedronBufferGeometry,RingBufferGeometry,ShapeBufferGeometry,SphereBufferGeometry,TetrahedronBufferGeometry,TextBufferGeometry,TorusBufferGeometry,TorusKnotBufferGeometry,TubeBufferGeometry|}",
 			"\t$1",
 			")"
